@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+    
+ <body>
+ 
+ <div class="header">
+ <header>
+           <h1>BIANCA'S PET PORTRAITS </h1>
+       
+   </header>
+ </div>
+     
+  
+      <nav class="navMenu">
+      <a href="#middle">About</a>
+      <a href="#bottom">Prices</a>
+      <a href="#end">contact</a>
+      <div class="dot"></div>
+      
+      
+    </nav>
+    
+    <!-- the shit -->
+
+ <div class="container">
+      
+      <h2 style="text-align:center"></h2>
+
+<div class="row">
+  <div class="theimages">
+    <img src="img/pebblespink.JPEG" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  </div>
+  
+  <div class="row">
+  <div class="theimages">
+    <img src="img/farley.JPEG" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  </div>
+  
+  <div class="row">
+  <div class="theimages">
+    <img src="img/pebblesblue.JPEG" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  </div>
+  
+  <div class="row">
+  <div class="theimages">
+    <img src="img/twocats.JPEG" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  </div>
+  </div>
+  
+  
+
+ 
+
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img/pebblespink.JPEG" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img/farley.JPEG" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img/pebblesblue.JPEG" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img/twocats.JPEG" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+</div>
+    
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+        
+      </div>
+     
+   <!------------ ABOUT ------------->
+   
+         
+   <!--- filler lol 
+   <div class="aboutrow">
+  <div class="column">
+    <h2></h2>
+    <p></p>
+  </div>
+</div>
+<div class="aboutrow">
+  <div class="column">
+    <h2></h2>
+    <p></p>
+  </div>
+</div>
+  <div class="aboutrow">
+  <div class="column">
+    <h2></h2>
+    <p></p>
+  </div>
+</div>  ---->
+<!---------------->
+
+<div class="aboutpic" id= "middle">
+<img src="img/twocats.JPEG" alt="catss" height="600px" width="600px" />
+<p>
+&nbsp;Digital painting allows artists to experiment with different techniques that would normally be costly and harmful to the environment. <br> &nbsp;With its use of various layers and save files, artists can return to an earlier state within the art piece making it a non-destructive work process.
+</p>
+<p> </p>
+<!--
+Digital painting enables artists to experiment with different techniques and colors easily as its use of layers, and save files, make it a non-destructive work process. Artists can always return to an earlier state within the art piece so nothing is ever truly lost.-->
+</div>
+
+<h2>Commision Pricing and Services</h2>
+<!--------------- PRICE --------------->
+
+<div class="pricerow">
+  
+  <div class="column" id= "bottom">
+    <h3>Print Options</h3>
+    
+    <ul>
+       <li>Sizes are 8" x 10", 11" x 14", 16" x 20" and 12.5" x 12.5"</li>
+        <li>Artwork print <mark>125$</mark></li>
+     <li>Artwork print framed <mark>150$</mark></li>
+  <li>Printable digital pdf of the work + JPEG <mark>150$</mark></li>
+  <dd>(Add) print <mark>+15$</mark></dd>
+  <dd>(Add) print framed <mark>+25$</mark></dd>
+  
+</ul>  
+
+
+  </div>
+  
+     <div class="column">
+    <h3>Instructions</h3>
+    
+    
+      <ul>
+        
+        <li>Email me with description if applicable and photos for reference, the more the merrier.</li>
+        <li>If you don't want me to post your commission on my website gallery let me know.</li>
+        <li>** include email you want your final work to be sent to.</li>
+        <li> <b>Process:</b></li>
+       <dd><b>1.</b> Work starts after full payment. </dd>
+       <dd><b>2.</b> Thumbnail image of final product is emailed for approval, no drastic changes can be done (e.g. entire pose, facial expression). </dd>
+        <dd><b>3.</b> Finished artwork will be sent by email, dropped off or mailed.</dd>
+  
+</ul>  
+ </div>
+  
+   <div class="column">
+    <h3>Terms of Service</h3>
+    
+    
+      <ul>
+        <li>PERSONAL USE ONLY. I maintain the copyright of the image.</li>
+        <li>Payment via Paypal.</li>
+        <li>1-2 business days to start the commission.</li>
+        <li>Commission will take anywhere from 1 week to a month. Work time fluctuates depending on how many commissions I have and the difficulty.</li>
+        <li>50% refund applicable until digital thumbnail image of the artwork has been approved.</li>
+    
+  
+</ul>  
+    
+    
+    
+    
+    
+    
+    
+    <!--<p>- PERSONAL USE ONLY, do not claim as your own. - Include description if applicable and photos for reference, the more the better. - If you don't want me to post your commission on my website gallery let me know. ** include email you want your final work to be sent to. 
+    
+1. Work starts after 50% or full payment.
+2. Thumbnail image of final product is emailed for approval, no drastic changes can be done (e.g. entire pose, facial expression).
+3. Finished artwork will be sent by email, dropped off or mailed after remaining full payment.</p>
+   
+   <p>- 1-2 business days to start the commission.
+- Commission will take anywhere from 1 week to 2 months. Work time fluctuates depending on how many commissions I have and the difficulty.
+- PERSONAL USE ONLY, do not claim as your own.
+- I will decline any commission that I'm not comfortable with.
+- 50% refund applicable until sketch has been approved.</p>-->
+    
+    <div class="dropdown" id= "end">
+  <button onclick="myFunction()" class="dropbtn">Email</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#contact">bstudioartwork@gmail.com</a>
+  </div>
+</div>
+ 
+  </div>
+
+
+</div>
+
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+
+
+ </body>
+
+
+</html>
