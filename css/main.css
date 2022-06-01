@@ -13,6 +13,8 @@ body {
   background: #FFFFFF;
   font-family: "Montserrat", sans-serif;
     background-image: url(../img/bg2.jpg);
+     background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 H1 {
